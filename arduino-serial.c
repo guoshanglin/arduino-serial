@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
     int baudrate = 9600;  // default
     char quiet=0;
     char eolchar = '\n';
-    int timeout = 5000;
+    int timeout = 200;
     char buf[buf_max];
     int rc,n;
 
