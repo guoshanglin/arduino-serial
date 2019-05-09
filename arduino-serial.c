@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
 
     int fd = -1;
     char serialport[buf_max];
-    int baudrate = 115200;  // default
+    int baudrate = 9600;  // default
     char quiet=0;
     char eolchar = '\n';
     int timeout = 5000;
@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
         usage();
     }
 
-    strcpy(serialport,"/dev/ttyACM0");
+    strcpy(serialport,"/dev/ttyUSB0");
     fd = serialport_init(serialport, baudrate);
     if( fd==-1 ) error("couldn't open port");
     if(!quiet) printf("opened port %s\n",serialport);
